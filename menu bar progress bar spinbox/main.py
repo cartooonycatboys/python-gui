@@ -3,7 +3,12 @@ from tkinter.ttk import *
 from time import strftime
 
 root=Tk()
+
+
 root.title("menu demonstration")
+
+
+
 
 Menubar=Menu(root)
 
