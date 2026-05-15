@@ -1,0 +1,18 @@
+from tkinter import *
+from tkinter.ttk import *
+
+root=Tk()
+root.geometry("150x200")
+root.title("scroll bar")
+label=Label(root,text="hello",font="50")
+label.pack()
+scroll_bar=Scrollbar(root)
+scroll_bar.pack(side=RIGHT,fill=Y)
+
+mylist=Listbox(root,yscrollcommand=scroll_bar.set)
+for line in range(1,26):
+    mylist.insert(END,"Hi"+str(line))
+mylist.pack(side=LEFT, fill=BOTH)
+scroll_bar.config(command=mylist.yview)
+
+root.mainloop()
